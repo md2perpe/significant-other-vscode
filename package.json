@@ -15,6 +15,7 @@
     "Other",
     "Testing"
   ],
+  "icon": "images/icon.png",
   "activationEvents": [
     "onCommand:significant-other.toggle"
   ],
