@@ -1,0 +1,49 @@
+{
+  "name": "significant-other",
+  "displayName": "Significant Other",
+  "description": "Quickly switch between a source file and its corresponding test file",
+  "publisher": "jasonrudolph",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.64.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonrudolph/significant-other-vscode.git"
+  },
+  "categories": [
+    "Other",
+    "Testing"
+  ],
+  "activationEvents": [
+    "onCommand:significant-other.toggle"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "significant-other.toggle",
+        "title": "Significant Other: Toggle",
+        "when": "editorTextFocus"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^7.2.0",
+    "@types/mocha": "^9.0.0",
+    "@types/node": "14.x",
+    "@types/vscode": "^1.63.0",
+    "@vscode/test-electron": "^2.0.3",
+    "eslint": "^8.6.0",
+    "eslint-config-prettier": "^8.3.0",
+    "glob": "^7.2.0",
+    "mocha": "^9.1.3",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.5.4"
+  }
+}
