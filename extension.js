@@ -22,7 +22,10 @@ async function toggle() {
   }
 
   const activePath = activeTextEditor.document.uri.path
-  const complementaryPath = await matchmaker.for(activePath).complementaryPath()
+  const relativePath = vscode.workspace.asRelativePath(activePath)
+  const workspaceFolder = vscode.workspace.getWorkspaceFolder(activeTextEditor.document.uri).uri.path
+  const complementaryPath = workspaceFolder + "/" + await matchmaker.getComplementaryPath(relativePath)
+
   if (complementaryPath) {
     vscode.window.showTextDocument(vscode.Uri.file(complementaryPath))
   } else {

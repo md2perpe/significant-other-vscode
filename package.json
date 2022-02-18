@@ -33,6 +33,48 @@
         "title": "Significant Other: Toggle",
         "when": "editorTextFocus"
       }
+    ],
+    "configuration": [
+      {
+        "title": "Significant Other",
+        "properties": {
+          "significantOther.mappings": {
+            "description": "Path mappings",
+            "type": "array",
+            "scope": "language-overridable",
+            "default": [
+              {
+                "source": "lib/:dirs+/:stem.js",
+                "test": "spec/:dirs+/:stem.js"
+              },
+              {
+                "source": ":dirs+/:stem.js",
+                "test": ":dirs+/:stem_spec.js"
+              },
+              {
+                "source": "lib/:dirs+/:stem.js",
+                "test": "test/:dirs+/:stem.test.js"
+              },
+              {
+                "source": ":dirs+/:stem.py",
+                "test": "tests/:dirs+/test_:stem.py"
+              },
+              {
+                "source": ":dirs+/:stem.js",
+                "test": ":dirs+/:stem-spec.js"
+              },
+              {
+                "source": ":dirs+/:stem.go",
+                "test": ":dirs+/:stem_test.go"
+              },
+              {
+                "source": "/app/:dirs+/:stem.rb",
+                "test": "/test/:dirs+/:stem_test.rb"
+              }
+            ]
+          }
+        }
+      }
     ]
   },
   "scripts": {
@@ -52,5 +94,8 @@
     "mocha": "^9.1.3",
     "rimraf": "^3.0.2",
     "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "path-to-regexp": "^6.2.0"
   }
 }
