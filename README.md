@@ -22,7 +22,7 @@ Significant Other assumes that:
 
 If your project follows a well-defined, widely-used project structure that doesn't satisfy the assumptions above, please [let me know about it][open-an-issue] so that I can consider enhancing the extension to support that project structure.
 
-## Bring your own keymap
+## Bring Your Own Keyboard Shortcut
 
 You may want to use a keyboard shortcut for switching between source files and test files. This extension does not provide a keyboard shortcut by default, but you can easily define your own. Use the [official guide][vscode-keyboard-shortcuts] to locate the `Significant Other: Toggle` command and assign a shortcut that sparks joy in your life. 🎇
 
