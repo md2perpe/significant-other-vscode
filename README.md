@@ -1,6 +1,8 @@
 # Significant Other for Visual Studio Code
 
-Provides a command to quickly switch between a source code file and its corresponding test file, and vice versa. Works with [most project structures](#supported-project-structures).
+Provides a command to quickly switch between a source code file and its corresponding test file, and vice versa.
+
+No configuration needed. Works with [most project structures](#supported-project-structures).
 
 ![demo](https://user-images.githubusercontent.com/2988/153523734-a90d1ab2-3e39-438f-8b25-be0eb36aa56a.gif)
 
